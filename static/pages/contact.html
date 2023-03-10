@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-9</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="container-heading">
+            <div class="logo">
+                <a class="beginning" href="../../index.html">Go</a>
+                <a class="ending" href="../../index.html">Green</a>
+            </div>
+            <ul class="heading">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Plants Care</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+                    <image width="22" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAABI0lEQVQ4ja2VgY2DMAxFf26CbgAbtBvQDegGvU06AiMwCt2AbpBuwAipovvWuSahIaolCxTjl9jYDjLSARgBeACBOnOtT7mEEN7USgtgUrCcxg2bUvARwEJQfN64kcgJwFVFsdBnE9wqaAz3kMsRbYOCN1tgOcWwAbQy0mfKgXt+4D+cNHVyibJLgWXn6w6oyE3SlwLPNJ4qwK1Ea8GOhiiuAgzxDyG8+f9Uwj5KBD/5UVPhL+l7WEME3/n+WwGWBlmBwbkgxb633KT++1yDTKrrSmVQ9V/U0kNBS4+lLQ0zhDwb5qjsDRtiMUOoK/nxrZnBOZ0I0+OgqKouDHdWYM+1s0mLT8JtbvZoIsp/+BfAafiXwCu4S118peLcam793ZkAXjF/d+hXDO+wAAAAAElFTkSuQmCC"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22" viewBox="0 0 24 22">
+                    <image width="24" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAA7ElEQVRIibVUwQ3DIAw8d4JskGzQjNANmk/fHbEjNBs0G6QbkH8fVFahihCGmBBLFhE6fD4fAQBmADZI3qsSJ6FIB6CtRRLGw6m5HqXg7dbLUQSjW7saBLHoIqaX5kwCiQHQVGh2kW6RH9MAgApycOcniWCv0X2OYK/RnmCUAN5oU0jwcuf7FMg4kPaPbtbNSSPCSl6yi0ic3daUIyg1+m9wjqBEQbu+ojlwIzzlW/Kz1Tu+TU9lcTb35guQtVYxAX2kPPh1QHQnIkNEM3+rMawglYEPJoZNYbIKgld1UWM2KGDJ3CGbd1dhrMUXLubF/gy4JRMAAAAASUVORK5CYII="/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="22" viewBox="0 0 21 22">
+                    <image width="21" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAWCAYAAAAvg9c4AAADSElEQVQ4jaWVX0hkdRTHP/c3d1R0nLEtmskcZ1AGROmhUlMKEmI0IqhYiCAC6WFZBKln96WMIA16CqOXoCyCXnqJStgeZB4l0S2W0nVQFAdLXf/beOfeG+fOGZVwCfQLh3vmd+d85/z5/s5YnZ2dCCzLorq6mtnZWY6OjlA8BQwBLwKPAvLiNvAt8D3ghUIhmpqaKJVK+L4fRNnNzc2npDU1NYTDYaanp/E8703gHaCLM8SA68ATwMPGmC+y2Wypvb2dvb290y/ZbW1tgXNyckJLSwu1tbUml8u95Hneh0AK2AC+BBaBx4E3AAl6z7Ks/MDAwO1IJMLq6iq2bZdJZ2ZmAmd/fz8ou6urK22MuamEQvQ+8M25bH8FPgEyrusORSKRe9vb28vz8/NEo9EyqfRC4LpukK3jOBkgK/0CPvoPoeAH7e8E8GqxWPwqn88vLy4uEotJd8CW4Qgcx0H9h3zfr9KhTHMxfgbuAwngmpTf0NBwlqnneYEjT/VPztHUPoA0DBj1Q5VBiwWk0stKTw8ODsTdMsZsyXSB17Wv/5wjlMiXpSI9LxwfHwexxpR/x+7t7WVnZycYkmg2FArdKRaLX6uc3gX+Aj4DpPnSlhvALc32p7q6uruZTIaFhYWgfDFbhtPR0cHGxkbwIp1OS68+B54DngY+AJ4B1oEmzbIemAM+Xlpayq+srJBIJGhtbWV9fZ0g5cHBQaamphgZGWF8fJyJCRlsIPpfAP8C+7Gvry81OjpKKpUim80GN3FoSC4f2PX19VIy3d3d9Pf3nzXOsmYKhcILxpgngee13EPgN8dxcsPDw8Tj8SChZDJ5eiurqqqwDw8PWVtbY3JyksbGxuTu7m5qbm4uHI/HG6LRqFwRsR2dtmdZVtJ13etjY2Oe7/ulnp6eg1gstry5ubmcz+d90XsFItB+XRIXlft/lgMGKxK0NYO3dCAJ1emeTts7Z77Kyag2LX3W6VA7gAjwqRC/Aixo0D3gbSANPKYL5EEm72XFvab7wFdNPyuk3+nBXZXLZSD79k/lCXbFln4YvSRhBbeUpyD9uaaHK1ck/UOfjwhp+T/gbEFcFpV4W5zyaikr4So4jRfSOyqhv69IKjvjPvD7v7jDNiS/CR93AAAAAElFTkSuQmCC"/>
+                  </svg>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <main>
+        <div class="contact-container">
+            <img src="../img/plants on the table.png" alt="pots of plants on the table">
+            <div class="contact-info">
+            <h1>for questions and remarks</h1>
+            <div class="columns">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36">
+                    <image width="36" height="36" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAACIElEQVRYhb2Yi3GCQBCGd20gdhBSgXagHVgCdGBSAUkFpgNiBbED0oF2AKkAO9jMOUtmPe4Fx7kzDiMsdx//7eMAgY2IlgCQA8Aa7PaDiEfH9XmMiDIiaijMzgyfxG4KKRgAyJQCAGBT4AkAXtnvExHfUqmzY12aAN9MaJhEpYWImS+fMyK2AHDhv1kqoN+RE/RAm1RA3UQgVzZONxEXXcggY/0nmRqcJ3kOhOpLxOzLtuDjDx+3gfedRvonB7rODXJnMi589UWr6ruUULUvLjQYbyGNBSp5ojoEJjQBYoCWrmwTwF1KmD6oVVu4iuwpDL5HDuZlqrYxMC24TSrtxZIl24Lok1Y8aWW5XrtiLQVQJmJpkHFacB8eBVW6loaIVgK6fBSU2qpaVSCiXGzWrFBKZX7AMqr3aSrkAVDfMhF4aWsaWsO+e4YNTw6RVQps5QCXBXNjKKIHVsj2IlEFg/FgzurMAGcxQWe7h4jWrGylKRietSyxt2WIZPD6ag8zrllzWzmLiYzLJyYox7QXERrG2ueC6pVSS7IPvtk/djEaSNx8EMsyS2GMAoKJsRIKtAjwHxgifgDACwC03PlbzprobckkIOC3WERUUO98qpgTLMo4syq6tyq0VUTHkGNgE1jD53a2aiyyN0eTwxxg/PGrMOwuLxx7/Sv5ln9tivc8E5xqFarwqTbRtxTd/ottEoV8gKxaX+3V15fTbU8PAH8W7r2LfyQcSgAAAABJRU5ErkJggg=="/>
+                  </svg>
+                  <address>2431743</address>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="30" viewBox="0 0 36 30">
+                    <image width="36" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAYAAABE4bxTAAAA3ElEQVRYhe2XQRHCUAwF36sBcNCiAHCABBwgASs4AQdIABS0EoqCMGFSyHAJp/SSPf3O70x3kl6WcIjIGsAGeYwABpIP/Ih0InKV+TiLSKsuNKEeQGfGl8QJLW0j+u0BwFZlDjaXXkSWiTJvbDu9ORwbADu7O5Ecs4VI6mRO9rhp3F26jOM5HZt/3s6khCJKKKKEIkooooQiSiiihCJKKKKEIrxQenE4Fp+jpofLoDbbRNPLZdCB1mI3F2v35ALZ23Y0qVeTZWc5Oxea8d+UduObsjbzf7qT1K0AAF6/HWNITMTEPAAAAABJRU5ErkJggg=="/>
+                    <image y="3" width="36" height="14" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAOCAYAAABHN77IAAAAx0lEQVQ4jcWU0Q3CMAxEPUI3oJvABozQETpCR2AERukIjJARGOFQ0FkyVgRpGhf/WFVT9/niswCYAaSc5U9BhuebgQ8adwCno7AADABW8/9ZX0xUCczTATBnqgLmqz8wOtpb7iAAZGBtjfXrrQBYzOHU8wqpSjKq1M0t1dIPcywdYGyjj6ZGe6hVGoXNIK5gm8yfdtaGLrtgTOGRK6FqPRTsHGKQqvXw084BUMX1sNnOAWB+4JvmrDeUXw9tdg4Ay27avatERF7t1tJO7h40FgAAAABJRU5ErkJggg=="/>
+                  </svg>
+                  <address>info@gogreen.ge</address>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="40" viewBox="0 0 32 40">
+                    <image width="32" height="40" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAoCAYAAACfKfiZAAAB+ElEQVRYhb1Xi3GDMAyVmYANwgbJBrBBuwEj0A24TpAR0g2SDWgnSDsB2YBsoByp3D7M18ZGd86Fj/WePkiyIgdh5h0RJbLueimlflz0zQozx8ycM/OZmRsel0beyZfqnvRAC0xEBRG9EVEMj26wYlmHgXc+lFLvrlanzFyDrRUzF8ycTOxJxFNX2FdLyKzAC1DQKsscDMgMA8qlG0vYdLQFntE3TcKwvFgLPqJ3OEElfs0ipm4ktCeawZyAxDn5BgeMo05o80HunLF2BGLwcooPqsn4+CVRdrwgsdexiWc1rCeAXthFRPQizy5KqXtoAoJxkcvXloAuMp+hwUG+5G+G2X/YCh3CXhMUiODxBwKxzjvV/tJvbJxmgxUknrjRlqBDEknfppAFyBTIt1tL4FsuNktCItLGdghY9/wV8v/py+TzzMit0GFQyfSNfoMIB57+1QC42W0QYQmcegPPaJv0D74fbftbeAFi35+4xAt1zz3+wEuwfrjs4xfhszBB85kfemBuG2dqB46enR/zjQ1nDwTO1gYZI7rz4cSIu/XxbL/mnGCcA/a2+7USPa5bkTCOY+smbVsSXsFHSJyGkkmSV5fZxvsZw8iJTlJJ0l4B3C3mC0gk8InWUrhS417YyUpIVNyXasvJ2kw2771jKYnWG+6jHBE9AMQhmbNCKJCFAAAAAElFTkSuQmCC"/>
+                    <image x="10" y="10" width="12" height="13" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAYAAACdKY9CAAAAvklEQVQokX2SARGDMAxFf6YAB+BgOEDCJCBhEiYBCRwKJmESVgfcFAwHfxdIeqWw/rtC+feThgeCTCRrAK25QUQ+eWYVyY7ki0e9rcku3CexL8mnFc+J33u4sZBqIFllzR5Jo1qN0YzxdNatyDMDkmPbQkFnmVn0qqaIHIhlRWvuAmAxoyqEG9suWhDs4V444Gb3kM6nFK5/5neKEa3idCkR/S66nM5GKOvkvM8Uwzsy9nI6b/yXAEwisoIBgB9iWw5qpgeZTAAAAABJRU5ErkJggg=="/>
+                  </svg>
+                  <address>Orkhevi, Chantladze Street 1</address>
+            </div>
+        </div>
+        <form action="#">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" id="surname">
+            </div>
+            <div>
+                <label for="phone">Phone number</label>
+                <input type="text" name="phone" id="phone">
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div class="type-letter">
+            <label for="letter">Type your letter</label>
+            <textarea name="letter" id="letter" cols="30" rows="10"></textarea>
+            </div>
+        </form>
+            </div>
+        </div>
+        <div class="map">
+            <h2>find us on the map</h2>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d189295.2152069255!2d44.835192385744584!3d41.69523983166752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404411f84d499f49%3A0xb9dd5c227cbf4473!2zMSDhg5fhg5Thg5zhg5Lhg5jhg5Yg4YOp4YOQ4YOc4YOi4YOa4YOQ4YOr4YOY4YOhIOGDpeGDo-GDqeGDkCwg4YOX4YOR4YOY4YOa4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1678481478440!5m2!1ska!2sge" width="878" height="451" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+        <div class="first-column">
+            <div class="footer-logo">
+                <a class="beginning" href="../../index.html">Go</a>
+                <a class="ending" href="../../index.html">Green</a>
+            </div>
+            <span>Stay in the loop with special offers, plant-parenting tips, and more.</span>
+            <div class="input-email">
+                <input type="text" placeholder="Enter your email">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13L7 7L1 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="white-social-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="25" viewBox="0 0 30 25">
+                    <image width="30" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAYCAYAAADtaU2/AAABdElEQVRIib1Wi1HDMAyVOAYoEzQbkA3CBrABbFA2CExQNihMknSCskHLBO0Gj9Mhg+rYjZ0P7y6X+E7S07NsKTQFABQA1gD2+MERQAPg0Q8PoLILcayH5CDBlSiGHYBbACtNZmOda3VaZZIWFwhDkB1ZAli4AI0xSlZutjYFRxW4+RXoEUPXyx7SMlOtw9lWryNGdSwBAPcDSGs/SNWXpRItjM9TLqvlZBOoIaK7hNJ+EtFBvx8S7B1OzHwTUlzo0Z8LO8t5pe9nItpnZD8EpxBxq+9yRuLWLhzxh5/RDNgGQyac7DHolNEpJmbe6lYfOlmNR+tHYLvQyVHoNcm5Kn0omPnL2lwHHN4nVvvikwZhJtUktbXd7j/JLw6aGLn7q2h6Bn0Mnb+PHPIqMDLnIZWajCCUmqYMGmIZd+bqlHqd0g/EH96I6JWZ0zug1lNmbm4txV7OQZJKi7MGokmIemkkTr08DtLVRJF0Iul0bZZCByL6Bh+UaCjTxuEsAAAAAElFTkSuQmCC"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+                    <image width="30" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABq0lEQVRIicWX/1HCUAzHv+kxQDewTCBOIE6AG1gnwA1gA9wA3UAmsEwATkCdoGwQL14e9+7ZHy+l4PcfuCMvn6QvTQIhQsycArgF8AhgCiADkOrJI4A9gBLABxFtYny2SoDMvGDmiuN1YOY1M9/0hc6NwFASwNya5foMYKhVLHQ3INRpp3XSCF71cFqp40/9PDTYrdvu1CIBPNVlwsx5g595aJj1qNzGqm0BVy7QRG0X3nsZoyURfRvsnYTxmzVpBJXhcElE45osXZOBNpqXhvPScMYjADNj1GUNVDrZLvKpic0s0RZ4Flgfn+WqpgKeGMF1skBP4GwAsFXpKDLawvu+r/m9DGyyjoRSxLyz1nRiOmDSUCznqqtuyn8FFx1GJmkj6aqbfQw4C67nz5Tx53dkF9wkRLQdOusOScst3JB4uyJ4CTediOj9SlmXyjqNRdGzTo5L6ejPhROYiOS1yi8Izv0Z7mcMXcYvAc/DRT8JLfQOJgM1FvExcffaClb4F4AHAK89gUet3jv1ZZcugtL03dra1kDERv7yWOdzuzQIt1f54Htdf+IE4AcdGA1jG8SPawAAAABJRU5ErkJggg=="/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+                    <image width="30" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABVUlEQVRIie1X0VHCQBTcRwXpwHRgOsAOsIPYCVgBJaAVaAfQQewgsQKwguc85i6zPmImjnfwk525gXkHt283L7AROKhqAWAJ4BFABaCgNQWnsLqwDiLyOvo9VV2p6lHTo1XVmrmESNcANq6XjhTENYboDsgtxkZEnllp7TRuVbWcaO2Yg6Wq7tzZNX+gHdxIBCfseJ4jV9ylJiVxW+JZWeGNClVG4uqHQFVtogW5SIk83jHNgiavy01Md0VhxKUr5kQvbnEFsiGUtyK+meKZeCaeidMSX+M32qNjxf9OHBPQ/y8Y8UckDgkzC8LZg8SG+4xqV/T+YJ0sKRm0OVTbmS7X3cWNPRWbfiMdaUPnn3OdhE3zfu8G7AXAOwWEqdNf0qtluCeXch5E5JM7K50dqWFn/+5kiLspG7CAt/azc/HQRg2YTWaXdfnXgbPL8xUe2C4vEYBvoZI71UDz5BYAAAAASUVORK5CYII="/>
+                    <image x="7" y="7" width="16" height="16" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA5ElEQVQ4jY1TgRGCMAz8OAEbyAaygW7ACIzACIzgCIygG+gGsgE6AW4QL1zANG3Fv8tdSZr/NAkEB2YuADQAKrW32hXAnYhePmcFM7fMPHEeIzM3ueQukTaqeXQ+ufEX9ClLvEwItJbAqqRLjIWmWcQ5+2yDviTnQMw5qj8ISiu401HNIKJhi4CInuazEILVYRv3o4LgTkAA4LBFAKA250EYj+ZNj60q3MT2i/NmnJc14ErXWDwx7axllnPPzLWOWSZlV1zioUiCJIc42ZUpK5sikgqCFRdEv7MhO8mc1YbkjgD4AAS2wZnjlHCYAAAAAElFTkSuQmCC"/>
+                    <image x="13" y="13" width="4" height="4" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAANklEQVQImUXIUQ0AEAAA0ZsJooFsmmgigggqiKDBGZt5f3eoSe3qUPMZJ54WgMW3IlCAeR/UDQPDIPkZucr4AAAAAElFTkSuQmCC"/>
+                  </svg>
+            </div>
+        </div>
+        <div class="second column">
+            <h4>company</h4>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Partners</a></li>
+            </ul>
+        </div>
+        <div class="third column">
+            <h4>support</h4>
+            <ul>
+                <li><a href="#">Help+FAQs</a></li>
+                <li><a href="#">Track Your Order</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Contact Support</a></li>
+            </ul>
+        </div>
+        <div class="fourth column">
+            <h4>plant questions</h4>
+            <ul>
+                <li><a href="#">Plant Care Tips</a></li>
+                <li><a href="#">Plant Life Blog</a></li>
+                <li><a href="#">Questions to our Gardeners</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="page-ending">
+            <ul>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

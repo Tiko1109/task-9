@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-9</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="container-heading">
+            <div class="logo">
+                <a class="beginning" href="index.html">Go</a>
+                <a class="ending" href="index.html">Green</a>
+            </div>
+            <ul class="heading">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Plants Care</a></li>
+                <li><a href="static/pages/contact.html">Contact</a></li>
+            </ul>
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+                    <image width="22" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAABI0lEQVQ4ja2VgY2DMAxFf26CbgAbtBvQDegGvU06AiMwCt2AbpBuwAipovvWuSahIaolCxTjl9jYDjLSARgBeACBOnOtT7mEEN7USgtgUrCcxg2bUvARwEJQfN64kcgJwFVFsdBnE9wqaAz3kMsRbYOCN1tgOcWwAbQy0mfKgXt+4D+cNHVyibJLgWXn6w6oyE3SlwLPNJ4qwK1Ea8GOhiiuAgzxDyG8+f9Uwj5KBD/5UVPhL+l7WEME3/n+WwGWBlmBwbkgxb633KT++1yDTKrrSmVQ9V/U0kNBS4+lLQ0zhDwb5qjsDRtiMUOoK/nxrZnBOZ0I0+OgqKouDHdWYM+1s0mLT8JtbvZoIsp/+BfAafiXwCu4S118peLcam793ZkAXjF/d+hXDO+wAAAAAElFTkSuQmCC"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22" viewBox="0 0 24 22">
+                    <image width="24" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAA7ElEQVRIibVUwQ3DIAw8d4JskGzQjNANmk/fHbEjNBs0G6QbkH8fVFahihCGmBBLFhE6fD4fAQBmADZI3qsSJ6FIB6CtRRLGw6m5HqXg7dbLUQSjW7saBLHoIqaX5kwCiQHQVGh2kW6RH9MAgApycOcniWCv0X2OYK/RnmCUAN5oU0jwcuf7FMg4kPaPbtbNSSPCSl6yi0ic3daUIyg1+m9wjqBEQbu+ojlwIzzlW/Kz1Tu+TU9lcTb35guQtVYxAX2kPPh1QHQnIkNEM3+rMawglYEPJoZNYbIKgld1UWM2KGDJ3CGbd1dhrMUXLubF/gy4JRMAAAAASUVORK5CYII="/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="22" viewBox="0 0 21 22">
+                    <image width="21" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAWCAYAAAAvg9c4AAADSElEQVQ4jaWVX0hkdRTHP/c3d1R0nLEtmskcZ1AGROmhUlMKEmI0IqhYiCAC6WFZBKln96WMIA16CqOXoCyCXnqJStgeZB4l0S2W0nVQFAdLXf/beOfeG+fOGZVwCfQLh3vmd+d85/z5/s5YnZ2dCCzLorq6mtnZWY6OjlA8BQwBLwKPAvLiNvAt8D3ghUIhmpqaKJVK+L4fRNnNzc2npDU1NYTDYaanp/E8703gHaCLM8SA68ATwMPGmC+y2Wypvb2dvb290y/ZbW1tgXNyckJLSwu1tbUml8u95Hneh0AK2AC+BBaBx4E3AAl6z7Ks/MDAwO1IJMLq6iq2bZdJZ2ZmAmd/fz8ou6urK22MuamEQvQ+8M25bH8FPgEyrusORSKRe9vb28vz8/NEo9EyqfRC4LpukK3jOBkgK/0CPvoPoeAH7e8E8GqxWPwqn88vLy4uEotJd8CW4Qgcx0H9h3zfr9KhTHMxfgbuAwngmpTf0NBwlqnneYEjT/VPztHUPoA0DBj1Q5VBiwWk0stKTw8ODsTdMsZsyXSB17Wv/5wjlMiXpSI9LxwfHwexxpR/x+7t7WVnZycYkmg2FArdKRaLX6uc3gX+Aj4DpPnSlhvALc32p7q6uruZTIaFhYWgfDFbhtPR0cHGxkbwIp1OS68+B54DngY+AJ4B1oEmzbIemAM+Xlpayq+srJBIJGhtbWV9fZ0g5cHBQaamphgZGWF8fJyJCRlsIPpfAP8C+7Gvry81OjpKKpUim80GN3FoSC4f2PX19VIy3d3d9Pf3nzXOsmYKhcILxpgngee13EPgN8dxcsPDw8Tj8SChZDJ5eiurqqqwDw8PWVtbY3JyksbGxuTu7m5qbm4uHI/HG6LRqFwRsR2dtmdZVtJ13etjY2Oe7/ulnp6eg1gstry5ubmcz+d90XsFItB+XRIXlft/lgMGKxK0NYO3dCAJ1emeTts7Z77Kyag2LX3W6VA7gAjwqRC/Aixo0D3gbSANPKYL5EEm72XFvab7wFdNPyuk3+nBXZXLZSD79k/lCXbFln4YvSRhBbeUpyD9uaaHK1ck/UOfjwhp+T/gbEFcFpV4W5zyaikr4So4jRfSOyqhv69IKjvjPvD7v7jDNiS/CR93AAAAAElFTkSuQmCC"/>
+                  </svg>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main-part">
+            <div class="intro">
+                <img src="static/img/anthurium and trachelium.png" alt="anthurium and trachelium in a wooden pot">
+                <h1>home is where your plants are.</h1>
+                <p>Green plants provide a substantial proportion of the world's molecular oxygen, and are the basis of most of Earth's ecosystems.</p>
+                <div class="intro-buttons">
+                    <button>Buy now</button>
+                    <button>See more</button>
+                </div>
+            </div>
+                <div class="social-icons">
+                    <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.3815 26C22.8312 26 29.6426 15.996 29.6426 7.32319C29.6426 7.04195 29.6362 6.75446 29.6233 6.47322C30.9483 5.54405 32.0918 4.39315 33 3.07459C31.766 3.60698 30.4558 3.95467 29.1141 4.10581C30.5268 3.28473 31.5845 1.99487 32.0912 0.475315C30.7623 1.23901 29.3089 1.77773 27.7935 2.06838C26.7724 1.01635 25.4224 0.319787 23.9521 0.0863747C22.4818 -0.147037 20.9731 0.0957069 19.6594 0.777076C18.3456 1.45845 17.3 2.54049 16.684 3.85592C16.0681 5.17134 15.9162 6.64688 16.2519 8.05441C13.5609 7.92347 10.9284 7.24565 8.52497 6.06488C6.12154 4.88412 4.00083 3.22677 2.30033 1.20029C1.43605 2.6452 1.17158 4.35501 1.56067 5.98221C1.94976 7.60941 2.96321 9.03191 4.39506 9.96059C3.32011 9.9275 2.26872 9.64686 1.32773 9.14187V9.22312C1.32677 10.7394 1.86738 12.2093 2.85768 13.3828C3.84797 14.5564 5.22682 15.3612 6.75984 15.6604C5.76408 15.9246 4.71898 15.9631 3.70541 15.7729C4.138 17.0769 4.97966 18.2175 6.11293 19.0354C7.24621 19.8533 8.61454 20.3077 10.027 20.3352C7.62908 22.1616 4.66699 23.1523 1.61777 23.1476C1.07702 23.1468 0.536799 23.1147 0 23.0514C3.09768 24.9784 6.70111 26.0019 10.3815 26Z" fill="black"/>
+                        </svg>
+                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 15.5947C32 6.98199 24.8366 0 16 0C7.16344 0 0 6.98199 0 15.5947C0 23.3784 5.85094 29.8301 13.5 31V20.1026H9.4375V15.5947H13.5V12.159C13.5 8.25058 15.8888 6.09169 19.5434 6.09169C21.2934 6.09169 23.125 6.39627 23.125 6.39627V10.234H21.1075C19.12 10.234 18.5 11.4362 18.5 12.6707V15.5947H22.9375L22.2281 20.1026H18.5V31C26.1491 29.8301 32 23.3784 32 15.5947Z" fill="black"/>
+                            </svg>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.0002 10.793C13.133 10.793 10.7932 13.1328 10.7932 16C10.7932 18.8672 13.133 21.207 16.0002 21.207C18.8674 21.207 21.2072 18.8672 21.2072 16C21.2072 13.1328 18.8674 10.793 16.0002 10.793ZM31.6174 16C31.6174 13.8438 31.6369 11.707 31.5158 9.55469C31.3947 7.05469 30.8244 4.83594 28.9963 3.00781C27.1642 1.17578 24.9494 0.609377 22.4494 0.488283C20.2932 0.36719 18.1564 0.386721 16.0041 0.386721C13.8478 0.386721 11.7111 0.36719 9.55878 0.488283C7.05878 0.609377 4.84003 1.17969 3.0119 3.00781C1.17987 4.83985 0.613467 7.05469 0.492373 9.55469C0.371279 11.7109 0.39081 13.8477 0.39081 16C0.39081 18.1523 0.371279 20.293 0.492373 22.4453C0.613467 24.9453 1.18378 27.1641 3.0119 28.9922C4.84394 30.8242 7.05878 31.3906 9.55878 31.5117C11.715 31.6328 13.8517 31.6133 16.0041 31.6133C18.1603 31.6133 20.2971 31.6328 22.4494 31.5117C24.9494 31.3906 27.1682 30.8203 28.9963 28.9922C30.8283 27.1602 31.3947 24.9453 31.5158 22.4453C31.6408 20.293 31.6174 18.1563 31.6174 16ZM16.0002 24.0117C11.5666 24.0117 7.98847 20.4336 7.98847 16C7.98847 11.5664 11.5666 7.98828 16.0002 7.98828C20.4338 7.98828 24.0119 11.5664 24.0119 16C24.0119 20.4336 20.4338 24.0117 16.0002 24.0117ZM24.34 9.53125C23.3049 9.53125 22.4689 8.69532 22.4689 7.66016C22.4689 6.625 23.3049 5.78907 24.34 5.78907C25.3752 5.78907 26.2111 6.625 26.2111 7.66016C26.2114 7.90596 26.1632 8.14941 26.0693 8.37656C25.9754 8.60371 25.8376 8.8101 25.6638 8.98391C25.49 9.15772 25.2836 9.29553 25.0564 9.38945C24.8293 9.48338 24.5858 9.53156 24.34 9.53125Z" fill="black"/>
+                                </svg>
+                </div>
+            </div>
+                <div class="empty"></div>
+            <section class="products">
+               <h2>choose your plant today</h2>
+               <div class="product-wrapper">
+                <div class="product">
+                    <img class="product-image" src="static/img/products/succulent.png" alt="succulent plant">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="product-info">
+                        <span>succulent</span>
+                        <span>50$</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="product-image" src="static/img/products/spider plant.png" alt="spider plant">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="product-info">
+                    <span>spider plant</span>
+                    <span>30$</span>
+                </div>
+                </div>
+                <div class="product">
+                    <img class="product-image" src="static/img/products/snake plant.png" alt="snake plant">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="product-info">
+                    <span>snake plant</span>
+                    <span>23$</span>
+                </div>
+                </div>
+                <div class="product">
+                    <img class="product-image" src="static/img/products/corn plant.png" alt="corn plant">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="product-info">
+                    <span>corn plant</span>
+                    <span>17$</span>
+                </div>
+                </div>
+                <div class="product">
+                    <img class="product-image" src="static/img/products/cactus.png" alt="cactus plant">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="product-info">
+                    <span>cactus</span>
+                    <span>15$</span>
+                </div>
+                </div>
+                <div class="product">
+                    <img class="product-image" src="static/img/products/rubber fig.png" alt="rubber fig plant">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="product-info">
+                    <span>rubber fig</span>
+                    <span>30$</span>
+                </div>
+                </div>
+               </div>
+               <button class="more">See more</button>
+            </section>
+            <section class="plant-care">
+                <h2>plants care</h2>
+                <div class="articles">
+                <div class="article">
+                    <img src="static/img/articles/woman touching a plant.png" alt="woman touches a plant leaf">
+                    <h3>The Gardener’s Guide to Air Plant Growth and Care</h3>
+                    <p>Epiphytic plants have evolved to grow on the surface of other plants, clinging on with their roots for support. A common location for these types of plants is on branches of mature trees, where they can collect moisture from the air...</p>
+                </div>
+                <div class="article">
+                    <img src="static/img/articles/man carrying a plant.png" alt="man carries a plant in a pot">
+                    <h3>What To Consider Before Moving Your Indoor Plants Outside For The Summer</h3>
+                    <p>In their native environment, many common houseplants grow along the forest floor in bright, indirect light that’s filtered by the canopy of taller trees above...</p>
+                </div>
+                </div>
+                <button class="more">See more</button>
+            </section>
+        </div>
+        <section class="plant-accessories">
+            <img src="static/img/plants in pots.png" alt="three plants in pots">
+            <div>
+                <h2>plant accessories</h3>
+                <div class="section-info">
+                <p>Plants are like children. You name them, care for them and now, you dress them. Well, not exactly, but you do accessorize them!</p>
+                <p>This doesn’t look like adorning them with jewels and cufflinks. Instead, it’s hanging them in macrame planters, placing them on bamboo trays and gently spraying them with using a glass mister.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+        <div class="first-column">
+            <div class="footer-logo">
+                <a class="beginning" href="index.html">Go</a>
+                <a class="ending" href="index.html">Green</a>
+            </div>
+            <span>Stay in the loop with special offers, plant-parenting tips, and more.</span>
+            <div class="input-email">
+                <input type="text" placeholder="Enter your email">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13L7 7L1 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="white-social-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="25" viewBox="0 0 30 25">
+                    <image width="30" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAYCAYAAADtaU2/AAABdElEQVRIib1Wi1HDMAyVOAYoEzQbkA3CBrABbFA2CExQNihMknSCskHLBO0Gj9Mhg+rYjZ0P7y6X+E7S07NsKTQFABQA1gD2+MERQAPg0Q8PoLILcayH5CDBlSiGHYBbACtNZmOda3VaZZIWFwhDkB1ZAli4AI0xSlZutjYFRxW4+RXoEUPXyx7SMlOtw9lWryNGdSwBAPcDSGs/SNWXpRItjM9TLqvlZBOoIaK7hNJ+EtFBvx8S7B1OzHwTUlzo0Z8LO8t5pe9nItpnZD8EpxBxq+9yRuLWLhzxh5/RDNgGQyac7DHolNEpJmbe6lYfOlmNR+tHYLvQyVHoNcm5Kn0omPnL2lwHHN4nVvvikwZhJtUktbXd7j/JLw6aGLn7q2h6Bn0Mnb+PHPIqMDLnIZWajCCUmqYMGmIZd+bqlHqd0g/EH96I6JWZ0zug1lNmbm4txV7OQZJKi7MGokmIemkkTr08DtLVRJF0Iul0bZZCByL6Bh+UaCjTxuEsAAAAAElFTkSuQmCC"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+                    <image width="30" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABq0lEQVRIicWX/1HCUAzHv+kxQDewTCBOIE6AG1gnwA1gA9wA3UAmsEwATkCdoGwQL14e9+7ZHy+l4PcfuCMvn6QvTQIhQsycArgF8AhgCiADkOrJI4A9gBLABxFtYny2SoDMvGDmiuN1YOY1M9/0hc6NwFASwNya5foMYKhVLHQ3INRpp3XSCF71cFqp40/9PDTYrdvu1CIBPNVlwsx5g595aJj1qNzGqm0BVy7QRG0X3nsZoyURfRvsnYTxmzVpBJXhcElE45osXZOBNpqXhvPScMYjADNj1GUNVDrZLvKpic0s0RZ4Flgfn+WqpgKeGMF1skBP4GwAsFXpKDLawvu+r/m9DGyyjoRSxLyz1nRiOmDSUCznqqtuyn8FFx1GJmkj6aqbfQw4C67nz5Tx53dkF9wkRLQdOusOScst3JB4uyJ4CTediOj9SlmXyjqNRdGzTo5L6ejPhROYiOS1yi8Izv0Z7mcMXcYvAc/DRT8JLfQOJgM1FvExcffaClb4F4AHAK89gUet3jv1ZZcugtL03dra1kDERv7yWOdzuzQIt1f54Htdf+IE4AcdGA1jG8SPawAAAABJRU5ErkJggg=="/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+                    <image width="30" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABVUlEQVRIie1X0VHCQBTcRwXpwHRgOsAOsIPYCVgBJaAVaAfQQewgsQKwguc85i6zPmImjnfwk525gXkHt283L7AROKhqAWAJ4BFABaCgNQWnsLqwDiLyOvo9VV2p6lHTo1XVmrmESNcANq6XjhTENYboDsgtxkZEnllp7TRuVbWcaO2Yg6Wq7tzZNX+gHdxIBCfseJ4jV9ylJiVxW+JZWeGNClVG4uqHQFVtogW5SIk83jHNgiavy01Md0VhxKUr5kQvbnEFsiGUtyK+meKZeCaeidMSX+M32qNjxf9OHBPQ/y8Y8UckDgkzC8LZg8SG+4xqV/T+YJ0sKRm0OVTbmS7X3cWNPRWbfiMdaUPnn3OdhE3zfu8G7AXAOwWEqdNf0qtluCeXch5E5JM7K50dqWFn/+5kiLspG7CAt/azc/HQRg2YTWaXdfnXgbPL8xUe2C4vEYBvoZI71UDz5BYAAAAASUVORK5CYII="/>
+                    <image x="7" y="7" width="16" height="16" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA5ElEQVQ4jY1TgRGCMAz8OAEbyAaygW7ACIzACIzgCIygG+gGsgE6AW4QL1zANG3Fv8tdSZr/NAkEB2YuADQAKrW32hXAnYhePmcFM7fMPHEeIzM3ueQukTaqeXQ+ufEX9ClLvEwItJbAqqRLjIWmWcQ5+2yDviTnQMw5qj8ISiu401HNIKJhi4CInuazEILVYRv3o4LgTkAA4LBFAKA250EYj+ZNj60q3MT2i/NmnJc14ErXWDwx7axllnPPzLWOWSZlV1zioUiCJIc42ZUpK5sikgqCFRdEv7MhO8mc1YbkjgD4AAS2wZnjlHCYAAAAAElFTkSuQmCC"/>
+                    <image x="13" y="13" width="4" height="4" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAANklEQVQImUXIUQ0AEAAA0ZsJooFsmmgigggqiKDBGZt5f3eoSe3qUPMZJ54WgMW3IlCAeR/UDQPDIPkZucr4AAAAAElFTkSuQmCC"/>
+                  </svg>
+            </div>
+        </div>
+        <div class="second column">
+            <h4>company</h4>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Partners</a></li>
+            </ul>
+        </div>
+        <div class="third column">
+            <h4>support</h4>
+            <ul>
+                <li><a href="#">Help+FAQs</a></li>
+                <li><a href="#">Track Your Order</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Contact Support</a></li>
+            </ul>
+        </div>
+        <div class="fourth column">
+            <h4>plant questions</h4>
+            <ul>
+                <li><a href="#">Plant Care Tips</a></li>
+                <li><a href="#">Plant Life Blog</a></li>
+                <li><a href="#">Questions to our Gardeners</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="page-ending">
+            <ul>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>
